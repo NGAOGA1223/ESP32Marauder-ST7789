@@ -9,9 +9,9 @@
   //// BOARD TARGETS
   //#define MARAUDER_M5STICKC
   //#define MARAUDER_MINI
-  //#define MARAUDER_V4
+  #define MARAUDER_V4
   //#define MARAUDER_V6
-  #define MARAUDER_V6_1
+  //#define MARAUDER_V6_1
   //#define MARAUDER_KIT
   //#define GENERIC_ESP32
   //#define MARAUDER_FLIPPER
@@ -394,7 +394,7 @@
 
     #ifdef MARAUDER_V4
       #define SCREEN_CHAR_WIDTH 40
-      #define HAS_ILI9341
+      #define HAS_ST7789
       #define BANNER_TEXT_SIZE 2
 
       #ifndef TFT_WIDTH
@@ -451,7 +451,7 @@
 
     #if defined(MARAUDER_V6) || defined(MARAUDER_V6_1)
       #define SCREEN_CHAR_WIDTH 40
-      #define HAS_ILI9341
+      #define HAS_ST7789
     
       #define BANNER_TEXT_SIZE 2
 
@@ -509,7 +509,7 @@
 
     #ifdef MARAUDER_KIT
       #define SCREEN_CHAR_WIDTH 40
-      #define HAS_ILI9341
+      #define HAS_ST7789
     
       #define BANNER_TEXT_SIZE 2
 

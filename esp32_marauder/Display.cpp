@@ -34,13 +34,13 @@ void Display::RunSetup()
 
   tft.setCursor(0, 0);
 
-  #ifdef HAS_ILI9341
+  #ifdef HAS_ST7789
 
     #ifdef TFT_SHIELD
-      uint16_t calData[5] = { 275, 3494, 361, 3528, 4 }; // tft.setRotation(0); // Portrait with TFT Shield
-      //Serial.println(F("Using TFT Shield"));
+     uint16_t calData[5] = { 304, 3533, 211, 3481, 2 }; // tft.setRotation(0); // Portrait with TFT Shield
+      Serial.println(F("Using TFT Shield"));
     #else if defined(TFT_DIY)
-      uint16_t calData[5] = { 339, 3470, 237, 3438, 2 }; // tft.setRotation(0); // Portrait with DIY TFT
+      uint16_t calData[5] = { 256, 3572, 234, 3463, 2 }; // tft.setRotation(0); // Portrait with DIY TFT
       //Serial.println(F("Using TFT DIY"));
     #endif
     tft.setTouch(calData);
@@ -398,8 +398,8 @@ void Display::setupScrollArea(uint16_t tfa, uint16_t bfa) {
   //Serial.println("   tfa: " + (String)tfa);
   //Serial.println("   bfa: " + (String)bfa);
   //Serial.println("yStart: " + (String)this->yStart);
-  #ifdef HAS_ILI9341
-    tft.writecommand(ILI9341_VSCRDEF); // Vertical scroll definition
+  #ifdef HAS_ST7789
+    tft.writecommand(ST7789_VSCRDEF); // Vertical scroll definition
     tft.writedata(tfa >> 8);           // Top Fixed Area line count
     tft.writedata(tfa);
     tft.writedata((YMAX-tfa-bfa)>>8);  // Vertical Scrolling Area line count
@@ -411,8 +411,8 @@ void Display::setupScrollArea(uint16_t tfa, uint16_t bfa) {
 
 
 void Display::scrollAddress(uint16_t vsp) {
-  #ifdef HAS_ILI9341
-    tft.writecommand(ILI9341_VSCRSADD); // Vertical scrolling pointer
+  #ifdef HAS_ST7789
+    tft.writecommand(ST7789_VSCRSADD); // Vertical scrolling pointer
     tft.writedata(vsp>>8);
     tft.writedata(vsp);
   #endif

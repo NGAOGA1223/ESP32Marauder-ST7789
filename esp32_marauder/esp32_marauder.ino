@@ -204,7 +204,7 @@ void setup()
 
   #ifdef HAS_SCREEN
     display_obj.tft.drawCentreString("ESP32 Marauder", TFT_WIDTH/2, TFT_HEIGHT * 0.33, 1);
-    display_obj.tft.drawCentreString("JustCallMeKoko", TFT_WIDTH/2, TFT_HEIGHT * 0.5, 1);
+    display_obj.tft.drawCentreString("ngao._", TFT_WIDTH/2, TFT_HEIGHT * 0.5, 1);
     display_obj.tft.drawCentreString(display_obj.version_number, TFT_WIDTH/2, TFT_HEIGHT * 0.66, 1);
   #endif
 
@@ -339,7 +339,7 @@ void loop()
     mini = true;
   #endif
 
-  #ifdef HAS_ILI9341
+  #ifdef HAS_ST7789
     #ifdef HAS_BUTTONS
       if (c_btn.isHeld()) {
         if (menu_function_obj.disable_touch)
