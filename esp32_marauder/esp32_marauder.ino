@@ -203,8 +203,8 @@ void setup()
   */
 
   #ifdef HAS_SCREEN
-    display_obj.tft.drawCentreString("ESP32 Marauder", TFT_WIDTH/2, TFT_HEIGHT * 0.33, 1);
-    display_obj.tft.drawCentreString("ngao._", TFT_WIDTH/2, TFT_HEIGHT * 0.5, 1);
+    display_obj.tft.drawCentreString("ESP32 Marauder - Justcallmekoko", TFT_WIDTH/2, TFT_HEIGHT * 0.33, 1);
+    display_obj.tft.drawCentreString("Customize by ngao._", TFT_WIDTH/2, TFT_HEIGHT * 0.5, 1);
     display_obj.tft.drawCentreString(display_obj.version_number, TFT_WIDTH/2, TFT_HEIGHT * 0.66, 1);
   #endif
 

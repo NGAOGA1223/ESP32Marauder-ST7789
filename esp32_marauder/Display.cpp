@@ -40,7 +40,7 @@ void Display::RunSetup()
      uint16_t calData[5] = { 304, 3533, 211, 3481, 2 }; // tft.setRotation(0); // Portrait with TFT Shield
       Serial.println(F("Using TFT Shield"));
     #else if defined(TFT_DIY)
-      uint16_t calData[5] = { 256, 3572, 234, 3463, 2 }; // tft.setRotation(0); // Portrait with DIY TFT
+      uint16_t calData[5] = { 304, 3533, 211, 3481, 2 }; // tft.setRotation(0); // Portrait with DIY TFT
       //Serial.println(F("Using TFT DIY"));
     #endif
     tft.setTouch(calData);
