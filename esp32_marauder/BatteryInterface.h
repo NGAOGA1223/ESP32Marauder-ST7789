@@ -9,18 +9,18 @@
 
 #include <Wire.h>
 
-#define I2C_SDA 33
-#define I2C_SCL 22
 #define IP5306_ADDR 0x75
+#define MAX17048_ADDR 0x36
 
 class BatteryInterface {
   private:
     uint32_t initTime = 0;
-
   public:
     int8_t battery_level = 0;
     int8_t old_level = 0;
     bool i2c_supported = false;
+    bool has_max17048 = false;
+    bool has_ip5306 = false;
 
     BatteryInterface();
 

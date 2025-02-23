@@ -7,7 +7,7 @@
 
 #ifdef HAS_SCREEN
 
-#define BATTERY_ANALOG_ON 1
+#define BATTERY_ANALOG_ON 0
 
 #include "WiFiScan.h"
 #include "BatteryInterface.h"
@@ -73,6 +73,7 @@ extern Settings settings_obj;
 #define GPS_MENU 33
 #define DISABLE_TOUCH 34
 #define FLIPPER 35
+#define BLANK 36
 
 PROGMEM void my_disp_flush(lv_disp_drv_t *disp, const lv_area_t *area, lv_color_t *color_p);
 PROGMEM bool my_touchpad_read(lv_indev_drv_t * indev_driver, lv_indev_data_t * data);
@@ -205,6 +206,8 @@ class MenuFunctions
     Menu loadSSIDsMenu;
     Menu saveAPsMenu;
     Menu loadAPsMenu;
+    Menu saveATsMenu;
+    Menu loadATsMenu;
 
     #ifdef HAS_GPS
       // GPS Menu
